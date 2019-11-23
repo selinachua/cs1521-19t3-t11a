@@ -39,6 +39,7 @@ void process_file(char *c_file) {
 void compile(char *c_file, char *binary) {
     pid_t pid;
     extern char **environ;
+    // "/usr/local/bin/dcc hello_world.c -o hello_world"
     char *cc_argv[] = {C_COMPILER, c_file, "-o", binary, NULL};
 
     // print compile command
